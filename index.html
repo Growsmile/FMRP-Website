@@ -1,0 +1,1007 @@
+<!-- GWCODEX -->
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<title>ICE LOMUSPĒLE</title>
+
+<link rel="stylesheet" href="css/all.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-OvBgP9A2JBgiRad/mM36mkzXSXaJE9BEIENnVEmeZdITvwT09xnxLtT4twkCa8m/loMbPHsvPl0T8lRGVBwjlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<script src="https://kit.fontawesome.com/0dfdec2c7e.js"></script>
+<link rel="shortcut icon" type="assets/png" href="img/logo-1.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+<div class="container">
+  <div class="row">
+    <div  style="height: 116px;" class="d-md-block d-lg-none">
+	test
+    </div>
+  </div>
+</div>
+
+<!-- navigacija -->
+<nav style="background-color: #000000a1;" id="NavigatioBoxBlurNavigatioBoxBlur" class="navbar navbar-expand-sm navbar-dark fixed-top">
+    <a class="navbar-brand" width="95"></a>
+    <a class="navbar-brand float-start">
+        <img src="img/logo-1.png" width="95" alt="" class="text-center img-fluid d-inline-block align-middle mr-2"> 
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center " id="navbarText">
+      <ul class="navbar-nav mr-auto text-center ">
+        <!-- <li class="nav-item active"> -->
+          <!-- <a class="nav-link text-white" href="index.html">Galvenais</a> -->
+        <!-- </li> -->
+        <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link text-white">|</a> -->
+        <!-- </li> -->
+        <li class="nav-item">
+          <a class="nav-link text-white" target="_blank" href="https://discord.gg/pVRZsBtapF">Discord</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white d-none d-sm-block">|</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#Noteikumi">Noteikumi</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white d-none d-sm-block">|</a>
+        </li>
+        <div class="dropdown">
+            <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Anketas
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#WhiteList">Whitelist Anketa</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#StaffAnketa" >Staff Anketa</a></li>
+              <li><hr class="dropdown-divider "></li>
+			  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#NelegalAnketa">Nelegālās organizācijas Anketa</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#AtkartotsWhiteList" href="#">Atkārtotā Whitelist Anketa</a></li>
+            </ul>
+         </div>
+		</ul>
+    </div>
+</nav>
+
+<div id="Karuselis" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button style="background-color: black;" type="button" data-bs-target="#Karuselis" data-bs-slide-to="0" class="active d-none d-md-block" aria-current="true" aria-label="Slide 1"></button>
+    <button style="background-color: black;" type="button" data-bs-target="#Karuselis" data-bs-slide-to="1" class="d-none d-md-block" aria-label="Slide 2"></button>
+    <button style="background-color: black;" type="button" data-bs-target="#Karuselis" data-bs-slide-to="2"  class="d-none d-md-block" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/pic1.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption position-absolute bottom-0 start-0 carusel-edit" style="">
+	  
+		    <p class="lead"><img src="img/logo.png" alt="" class="d-block align-middle" style="width:90%;"> </p>
+			
+			<div class="row">
+			  <div class="col-1  col-sm-1 col-md-3"></div>
+			  <div class="col-11 col-sm-10 col-md-6"><button class="btn carusel-Button-link btn-carusel-edit btn-carusel-edit-color" data-bs-toggle="modal" data-bs-target="#WhiteList" ><b>Aizpildīt Whitelist anketu</b></button></div>
+			  <div class="  col-sm-1 ol-md-3"></div>
+			</div>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/pic2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption position-absolute bottom-0 start-0 carusel-edit" style="">
+	  
+		    <p class="lead"><img src="img/logo.png" alt="" class="d-block align-middle" style="width:90%;"> </p>
+			
+			<div class="row">
+			  <div class="col-1  col-sm-1 col-md-3"></div>
+			  <div class="col-11 col-sm-10 col-md-6"><button class="btn carusel-Button-link btn-carusel-edit btn-carusel-edit-color2" onclick="window.open('https://discord.gg/pVRZsBtapF')" ><b>Pievienoties DISCORD</b></button></div>
+			  <div class="  col-sm-1 ol-md-3"></div>
+			</div>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/pic3.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption position-absolute bottom-0 start-0 carusel-edit" style="">
+	  
+		    <p class="lead"><img src="img/logo.png" alt="" class="d-block align-middle" style="width:90%;"> </p>
+			
+			<div class="row">
+			  <div class="col-1  col-sm-1 col-md-3"></div>
+			  <div class="col-11 col-sm-10 col-md-6"><button class="btn carusel-Button-link btn-carusel-edit btn-carusel-edit-color3" data-bs-toggle="modal" data-bs-target="#Noteikumi" ><b>Izlasi Noteikumus</b></button></div>
+			  <div class="  col-sm-1 ol-md-3"></div>
+			</div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+	
+<footer style="background-color: #171717;" class="text-center">
+<img src="img/city.png" style="margin: -1px;" class="img-fluid bottom-0" alt="">
+  <!-- Copyright GwCodex-->
+  <div class="text-center p-3 text-white" style="background-color: black;">
+			© 2023 Copyright:
+		<a class="text-white" href="index.html">ICE.LV</a>
+		<i class="text-secondary">GwCodex</i>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<!-- Noteikumi -->
+<div class="modal fade" id="Noteikumi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="NoteikumiLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-white" id="NoteikumiLabel">NOTEIKUMI</h5>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body modal-background">
+<b><h1>
+<div class="text-danger">Noteikumu nezināšana neatbrīvo tevi no soda!</div></h1><br>
+<h2>Servera Noteikumi:</h2></b><br>
+
+<h6>Roleplay (RP)</h6><i>Reālās dzīves attēlojums, kurā tu spēlē, sevis izveidota tēla dzīvi, pilnībā iejūtoties sava tēla ādā un veidojot interesantas vai ikdienišķas situācijas ar citiem spelētājiem. Tavs tēls var būt jebkas, kas tu vēlies - fermeris, ārsts, mednieks vai pat kapu apkopējs, tu pats nosaki, cik interesants un talantīgs būs tavs tēls.
+</i><br><br>
+<h6>Out of Character (OOC)</h6><i>Viss, kas norisinās ārpus tēla dzīves, piemēram, ooc-čats, kurā ir kategoriski aizliegts apspriest sava vai citu tēlu dzīves, plānus un notikumus pilsētā.
+</i><br><br>
+<h6>In Character (IC)</h6><i>Viss, kas notiek iekš tava vai citu tēlu dzīves, proti, visas veiktās darbības un situācijas, kā arī visi tajās iesaistītie tēli.
+</i><br><br>
+<h6>FailRP</h6><i>Roleplay nepareiza attēlošana un izvairīšanās no roleplay situācijām.
+</i><br><br>
+<h6>FearRP</h6><i>Bailes par sava tēla dzīvību un nepamatota tā dzīvības apdraudēšana. Tu nedrīksti pakļaut savu tēlu briesmām, piemēram kā, atrasties aktīvas apšaudes vietā, lai tikai paskatītos.
+</i><br><br>
+<h6>Roleplay Etiquet Common Courtesy - (RECC)</h6><i>Pieklājība - viss, kas saistīts ar rasismu, naidu, rupjībām vai uzmākšanos ir aizliegts, tas nenozīmē to, ka nedrīkst lamāties, to var darīt tēla ietvaros, bet, tomēr atceraties, ka vienmēr visam ir robežas.
+</i><br><br>
+<h6>Powergaming (PG)</h6><i>Dzīvē neiespējamu darbību veikšana IC ir aizliegta, piemēram, nolekšana no liela augstuma un turpmākā RP nespēlēšana par to, ka kājas tika satraumētas, salauztas u.t.t, peldēt bezgalīgi ilgi un nenogurt..
+</i><br><br>
+<h6>CombatLog (CL)</h6><i>Spēles apzināta pamešana aktīvas roleplay situācijas laikā, piemēram, saprotot, ka tiksi noķerts, Jūs izejat no spēles, lai Jūs nenoķertu.
+</i><br><br>
+<h6>CommonSense (CS)</h6><i>Veselais saprāts , piemēram , izjust nogurumu kad ir peldēta liela distance.
+</i><br><br>
+<h6>Metagame (MG)</h6><i>Jebkura veida IC informācijas iegūšana OOC, piemēram, sazinoties diskordā ar draugu sarunāt, kur tiksieties. Kā arī, ir kategoriski aizliegts izmanot jebkādu informāciju IC, kuru esi ieguvis no strīmiem.
+</i><br><br>
+<h6>Mixing - (MIX)</h6><i>Reālās dzīves jaukšana ar spēles realitāti, piemēram, vārdu, jēdzienu jaukšana, piemēram, Los Santos nosaukt par serveri, spēlē pieminēt adminus, sūtīšanu uz "Banānu salām" vai runāšana par "Bībeli" un dažādas citas muļķības, kuras neattiecas uz spēles realitāti.
+</i><br><br>
+<h6>Deathmatch (DM)</h6><i>Cita spēlētāja nogalināšana bez pamatota IC iemesla. Cita spēlētāja nogalināšana dēļ tā, ka tev viņš nepatīk, tiek uzskatīts kā DM.
+</i><br><br>
+<h6>Vehicle-Deathmatch (VDM)</h6><i>Citu spēlētāju automašīnu bojāšana vai spēlētāju notriekšana ar automašīnu, bez pamatota IC iemesla, piemēram, pieskriet klāt kāda spēlētāja mašīnai un joka pēc cauršaut riepu, lai pēc tam spēlētājs nevarētu ar šo mašīnu pārvietoties.
+</i><br><br>
+<h6>Random-Deathmatch (RDM)</h6><i>Citu spēlētāju nogalināšana bez pamatota tam iemesla.
+</i><br><br>
+<h6>New-Life-Rule (NLR)</h6><i>Noteikums, kurš paredz, lai Jūs aizmirstat pēdējo situāciju, kura norisinājusies pirms Jūsu nāves, piemēram, Jūs piedalāties apšaudē, kurā Jūs nogalina, pēc kā pieceļaties slimnīcā un Jums ir aizliegts atcerēties pēdējo situāciju un tās cēloni.
+</i><br><br>
+<h6>Character-Kill (CK)</h6><i>Noteikums, kurš paredz pilnīgu tēla nogalināšanu, kuru var veikt gan pats tēla īpašnieks jebkurā brīdī, vai arī cits spēlētājs ar ļoti nopietnu, pamatotu iemeslu, kurš jāsaskaņo ar administrāciju un pamatojums jāiesniedz minimums 300 vārdu garumā, kur tiek uzskaitīti visi iemesli, kādēļ šim tēlam vajadzētu mirt.
+</i><br><br>
+<h6>Bad Faith Rule (BFR)</h6><i>Personas, ar kurām ir neskaitāmas un mūžīgas problēmas, tai skaitā izraisot nevajadzīgus strīdus ar administrācijas komandu, tiek likvidētas no servera.
+</i><br><br>
+<h6>Gun Over Roleplay (GORP)</h6><i>Roleplay situācijām jābūt kreatīvām un bagātīgām. Situācija, kad varētu 10 reizes labāk izspēlētu situāciju, jūs tā vietā izmantojat ieroci situācijas atrisināšanai. (Atšķirībā no situācijas, kas tiks ņemts vērā!). No šī brīža ieroča pielietošana ir pēdējais variants, kas var būt risinājums situācijas atrisināšanai. Tiks pieskaitīts arī pie "Common Sense" termina.
+<br>PIEMĒRS: Policists Apstādina tevi , tu sāc braukt prom iebrauc kāda hooda nošauj Policistu
+</i><br><br>
+<h6>Unrealistic Revival (UR)</h6><i>Kad jūs atdzivina jūs atrodaties ārsta uzraudzibā, jūs nedrīkstat vienkārši aizbēgt. Kamēr ārsts nav devis slēdzienu , ka varat doties jums ir aizliegts pamest notikuma vietu. Šis noteikums arī attiecas uz lēkāšanu , skriešanu pēc atdzivināšanas vai ieroča pielietošanu pret mediķi.
+</i><br><br>
+<h6>Musket Bug (MB)</h6><i>Kategoriski aizliegts šaut ar musketi pret cilvēkiem, tas ir domāts tikai lai medītu....(7 Dienu Bans)
+</i><br><br>
+<h6>PD Noteikumi</h6><i>
+- Kategoriski aizliegts ņemt PD automašinas(24 dienas bans)<br>
+- Kategoriski aizliegts provicēt policistus iet viņu teritorija akstīties(6 dienu bans)<br>
+- Kategoriski aizliegts Braukt ar PD Mašinu(12 dienu bans)
+</i><br><br>
+<h6>Sexual RP - Izpildīt neķītras lietas</h6><i>
+Kategoriski aizliegts likt 18+ drēbes. Publiskas vietas kategoriski aizliegts.. Piemēram - Staigā bez krūštura pie leģiona.
+</i><br><br>
+<h6>Take Over Robbery (TORP)</h6><i>
+Kategoriski aizliegts pārņemt jebkāda veidā Zadzība Piemēra - Bankas, Lielā Banka, Casino, Veikals, VAC Heist, Human Labs Heist, Bankomati, citus.
+</i><br><br>
+<h6>Bandas:</h6><i>
+4.0. Alieancē var būt max 2 gangi.<br>
+4.1. Aizliegts būt ar 2 tēliem nelegālajās organizācijās.<br>
+4.2. Gangam ir jāģērbjas vienā krāsā.<br>
+4.3. Gangā var būt max 6 cilvēki.<br>
+4.4. Nedrīkst atrasties ar 2 nelegālajiem characteriem ganga.<br>
+4.5. Organizāciju karam jabūt izrunātam ar abu pušu līderiem un arī ar administrāciju.<br>
+4.6. Tas ka tu esi bandā nenozīmē, ka FearRP neatiecās vairs uz tevi. Tev ir jāizrāda gan bailes par sevi, gan par savējiem biedriem.<br>
+4.7. Bandām ir jāpieturās pie backstory.<br>
+4.8. Bandas līderus kategoriski aizliegts nodot citām personām.<br>
+4.9. Esot kādā no nelegālajām organizācijām, jums ir jābaidās no policistiem, viņiem ir jābūt jūsu lielākajiem ienaidniekiem, jo jūs nodarbojaties tikai ar nelegālām lietām un viņi to saprot.
+</i><br><br>
+<h6>Twitter:</h6><i>
+5.0. Aizliegts Twitteri rakstīt OOC tekstu.<br> 
+5.1. Aizliegts Twitterī pārdot lietas, transportlīdzekļus, īpašumus.<br>
+5.2. Aizliegts publicēt Twitteri rupjus vārdus!<br>
+5.3. Aizliegts postot 18+ bildes.<br>
+5.4. Aizliegts izmantot lamuvārdus kā segvārdu.<br>
+5.7. Aizliegts publicēt foto ārpus tēla.
+</i><br><br>
+<h6>Konvojs:</h6><i>
+6.0. Konvojā piedalīties drīkst pilnībā visi!<br>
+6.1. Uz konvoju var sadarboties max 2 gangi, kopā 12 cilvēki.<br>
+6.2. Atļauts apzagts visus valsts pārstāvus kas piedalās konvojā!<br>
+6.3. Aizliegts atklāt uguni kad konvoju uzkrauj pie LSPD!<br>
+6.4. Kategoriski aizliegts pie LSPD pāršaut riepu konvojam. Uzsākt apšaudi var tikai uzbraucot uz šosejas.<br>
+6.5. Konvojs ilgts tik ilgi kamēr LSPD paziņojumā, kāds nav paziņojis par konvoja beigām.<br>
+6.6. Aizliegts izmantot supercarus konvoja laikā.<br>
+6.7. Konvoja laikā kategoriski aizliegts piecelt mirušos, lai turpinātu apšaudi.<br>
+6.8. Konvoja laikā visas nelegālās darbības (izņemot konvoja apzagšanu) tiek uz laiku apturētas, līdz tiks izziņots par to, kad konvoja pārvešana ir pabeigta.
+</i><br><br>
+<h4><b>DISCORD vārdam ir jasakrīt ar STEAM vārdu!</b></h4><br>
+
+<button type="button" class="btn btn-success btn-lg float-end" data-bs-dismiss="modal">Izlasīju</button>
+<br><br>
+ </div>
+      <div class="modal-footer bg-dark"></div>
+    </div>
+  </div>
+</div>
+
+<!-- WhiteList -->
+<div class="modal fade" id="WhiteList" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="WhiteListLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-white" id="WhiteListLabel">WHITELIST REĢISTRĀCIJA</h5>
+        <button type="button bg-white" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+		<div class="modal-body modal-background">
+
+		<form method="post" onsubmit="sendContact(event)" enctype='multipart/form-data'>
+			<section class="main">
+			  <div class="container" id="WlSuccessRequestShowHide">
+				<div class="row">
+				  <div class="col-md-6 form-group">
+					<label for="fname">Vārds un uzvārds(IC)</label>
+					<input type="text" name="username" id="userName" class="form-control" onkeydown="return /[a-z ā-ž]/i.test(event.key)" minlength="4" required>
+				  </div>
+				  <div class="col-md-6 form-group">
+					<label for="lname">Discord vārds</label>
+					<p><input type="text" name="username" id="discordName" class="form-control" minlength="4" required></p>
+				  </div>
+				</div>
+
+				<div class="row">
+				  <div class="col-md-6 form-group">
+					<label for="fname">Steam vārds</label>
+					<p><input type="text" name="username" id="steamName" class="form-control" required></p>
+				  </div>
+
+				  <div class="col-md-6 form-group">
+					<label for="lname">Cik tev gadi?</label>
+					<p><input type="number" name="username" id="ageAnswer" class="form-control" min="10" max="99" required></p>
+				  </div>
+				</div>
+				<br><br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Kā Tu izproti vārdu MG, jeb MetaGaming?( Arī piemēru kur to pārkāp )</label>
+					<input type="text" name="username" id="Answer2" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Kā Tu izproti vārdu RolePlay (RP), jeb lomuspēle?( Arī piemēru kur to pārkāp )</label>
+					<input type="text" name="username" id="Answer1" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Kā tu izproti vārdu FearRp, jeb FailRP?(Arī piemēru kur to pārkāp)</label>
+					<input type="text" name="username" id="Answer3" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Paskaidrojiet kādā situācijā vajadzētu izmantot OOC čatu un kādā situācijā nevajadzētu izmantot OOC čatu?</label>
+					<input type="text" name="username" id="Answer5" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>			
+				<br>
+				<div class="form-group">
+				  <!--checkbox -->
+				  <div class="checkbox form-check">
+					<input class="form-check-input" type="checkbox" name="checkWhitelistRules" id="checkWhitelistRules" />
+					<label class="form-check-label" for="checkWhitelistRules">Apliecienu, ka esmu piekritis servera noteikumiem.</label>
+				  </div>
+				</div>
+				<br>
+				<input id="checkWhitelistRulesDisable" type="submit" name="submit" class="form-group btn btn-success float-end" value="Nosūtīt" disabled> <br>
+			  </div>
+			  
+			  <!-- Veiksmīga anketa -->
+			  <div class="container" style="display:none" id="WlSuccessRequestHideShow">
+				<div class="alert alert-success" role="alert">
+				  <h4 class="alert-heading">Anketa nosūtīta!</h4><hr>
+				  <div class="row">
+				  <div class="col-12 form-group">
+				  <b>Turpmākās darbības:</b> 
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>1. Pievienojies servera Discord kanālam. <button type="button" class="btn btn-secondary btn-sm" style="width: 64px;background-color: #5865F2;" target="_blank" href="https://discord.gg/pVRZsBtapF" onclick="window.open('https://discord.gg/pVRZsBtapF')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+					<path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+				  </svg></button></p>
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>2. Administrators izskatīs jūsu anketu 48 stundu laikā.</p>
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>3. Atbilde tiks dota Discord sadaļā - #✅┋whitelist-atbildes.</p> <br>
+				  </div>
+				  <hr>
+				  <p class="mb-0">Problēmu gadijumā, raksti problēmas apklāstu Discord sadaļā - 🎫┋izveidot-ticket.</p>
+				</div>
+				</div>
+				<button type="button" class="btn btn-success btn-lg float-end" data-bs-dismiss="modal">Aizvērt</button>
+			  </div>
+			  <!-- Veiksmīga anketa beigas-->
+			  
+			</section>
+		</form>
+		</div>
+      <div class="modal-footer bg-dark"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Staff Anketa -->
+<div class="modal fade" id="StaffAnketa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="StaffLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-white" id="StaffLabel">PESAKIES KOMANDAI</h5>
+        <button type="button bg-white" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+		<div class="modal-body modal-background">
+
+		<form method="post" onsubmit="sendContactStaff(event)" enctype='multipart/form-data'>
+			<section class="main">
+			  <div class="container" id="StaffSuccessRequestShowHide">
+				<div class="row">
+				  <div class="col-md-6 form-group">
+					<label for="fname">Jūsu vārds un uzvārds (RL)</label>
+					<input type="text" name="username" id="userName" class="form-control" onkeydown="return /[a-z ā-ž]/i.test(event.key)" minlength="4" required>
+				  </div>
+				  <div class="col-md-6 form-group">
+					<label for="lname">Discord vārds</label>
+					<p><input type="text" name="username" id="discordName" class="form-control" minlength="4" required></p>
+				  </div>
+				</div>
+
+				<div class="row">
+				  <div class="col-md-6 form-group">
+					<label for="fname">Steam vārds</label>
+					<p><input type="text" name="username" id="steamName" class="form-control" required></p>
+				  </div>
+
+				  <div class="col-md-6 form-group">
+					<label for="lname">Cik tev gadi?</label>
+					<p><input type="number" name="username" id="ageAnswer" class="form-control" min="10" max="99" required></p>
+				  </div>
+				</div>
+				<br><br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Paskaidrojiet kā jūs saprotat terminu CS. Nepieciešams apraksts par terminu un skaidrojums kā var izvairīties no termina pārkāpšanas.</label>
+					<input type="text" name="username" id="Answer2" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Paskaidrojiet kā jūs saprotat terminu DM. Nepieciešams apraksts par terminu un skaidrojums kā var izvairīties no termina pārkāpšanas.</label>
+					<input type="text" name="username" id="Answer1" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Kā tu izproti vārdu FearRp, jeb FailRP?(Arī piemēru kur to pārkāp)</label>
+					<input type="text" name="username" id="Answer3" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Paskaidrojiet kādā situācijā vajadzētu izmantot OOC čatu un kādā situācijā nevajadzētu izmantot OOC čatu?</label>
+					<input type="text" name="username" id="Answer5" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>			
+				<br>
+				<div class="form-group">
+				  <!--checkbox -->
+				  <div class="checkbox form-check">
+					<input class="form-check-input" type="checkbox" name="checkStaffRules" id="checkStaffRules" />
+					<label class="form-check-label" for="checkStaffRules">Apliecienu, ka esmu piekritis servera noteikumiem.</label>
+				  </div>
+				</div>
+				<br>
+				<input id="checkStaffRulesDisable" type="submit" name="submit" class="form-group btn btn-success float-end" value="Nosūtīt" disabled>
+			  </div>
+			  
+			  <!-- Veiksmīga anketa -->
+			  <div class="container" style="display:none" id="StaffSuccessRequestHideShow">
+				<div class="alert alert-success" role="alert">
+				  <h4 class="alert-heading">Administratora anketa nosūtīta!</h4><hr>
+				  <div class="row">
+				  <div class="col-12 form-group">
+				  <b>Turpmākās darbības:</b> 
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>1. Galvenais administrators izskatīs jūsu anketu.</p>
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>2. Atbilde tiks dota Discord sadaļā - 🔰┋mod-atbildes.</p> <br>
+				  </div>
+				  <hr>
+				  <p class="mb-0">Problēmu gadijumā, raksti problēmas apklāstu Discord sadaļā - 🎫┋izveidot-ticket.</p>
+				</div>
+				</div>
+				<button type="button" class="btn btn-success btn-lg float-end" data-bs-dismiss="modal">Aizvērt</button>
+			  </div>
+			  <!-- Veiksmīga anketa beigas-->
+			  
+			</section>
+		</form>
+			
+		</div>
+      <div class="modal-footer bg-dark"></div>
+    </div>
+  </div>
+</div>
+
+<!-- nelegālā Anketa -->
+<div class="modal fade" id="NelegalAnketa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="NelegalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-white" id="NelegalLabel">NELEGĀLĀ ORGANIZĀCIJA</h5>
+        <button type="button bg-white" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+		<div class="modal-body modal-background">
+
+		<form method="post" onsubmit="sendContactNelegal(event)" enctype='multipart/form-data'>
+			<section class="main">
+			  <div class="container" id="NelegalSuccessRequestShowHide">
+				<div class="row">
+				  <div class="col-md-6 form-group">
+					<label for="fname">Jūsu vārds un uzvārds (IC)</label>
+					<input type="text" name="username" id="userName" class="form-control" onkeydown="return /[a-z ā-ž]/i.test(event.key)" minlength="4" required>
+				  </div>
+				  <div class="col-md-6 form-group">
+					<label for="lname">Discord vārds</label>
+					<p><input type="text" name="username" id="discordName" class="form-control" minlength="4" required></p>
+				  </div>
+				</div>
+
+				<div class="row">
+				  <div class="col-md-6 form-group">
+					<label for="fname">Steam vārds</label>
+					<p><input type="text" name="username" id="steamName" class="form-control" required></p>
+				  </div>
+
+				  <div class="col-md-6 form-group">
+					<label for="lname">Organizācijas nosaukums</label>
+					<p><input type="text" name="username" id="ageAnswer" class="form-control" minlength="4" required></p>
+				  </div>
+				</div>
+				<br><br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Paskaidrojiet, ar ko nodarbosies jūsu organizācija?</label>
+					<input type="text" name="username" id="Answer2" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Orgazinācijas apraksts</label>
+					<input type="text" name="username" id="Answer1" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Organizācijas logo (link)</label>
+					<input type="text" name="username" id="Answer3" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<!-- <div class="row"> -->
+				  <!-- <div class="col-md-12 form-group"> -->
+					<!-- <label for="fname">Paskaidrojiet kādā situācijā vajadzētu izmantot OOC čatu un kādā situācijā nevajadzētu izmantot OOC čatu?*</label> -->
+					<!-- <input type="text" name="username" id="Answer5" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required> -->
+				  <!-- </div> -->
+				<!-- </div>			 -->
+				<br>
+				<div class="form-group">
+				  <!--checkbox -->
+				  <div class="checkbox form-check">
+					<input class="form-check-input" type="checkbox" name="checkNelegalRules" id="checkNelegalRules" />
+					<label class="form-check-label" for="checkNelegalRules">Apliecienu, ka esmu piekritis servera noteikumiem.</label>
+				  </div>
+				</div>
+				<br>
+				<input id="checkNelegalRulesDisable" type="submit" name="submit" class="form-group btn btn-success float-end" value="Nosūtīt" disabled>
+			  </div>
+			  
+			  <!-- Veiksmīga anketa -->
+			  <div class="container" style="display:none" id="NelegalSuccessRequestHideShow">
+				<div class="alert alert-success" role="alert">
+				  <h4 class="alert-heading">Nelegālās organizācijas anketa nosūtīta!</h4><hr>
+				  <div class="row">
+				  <div class="col-12 form-group">
+				  <b>Turpmākās darbības:</b> 
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>1. Galvenais administrators izskatīs jūsu anketu.</p>
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>3. Ar jums privati sazināsies Discord galvenais administrators.</p> <br>
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>2. Atbilde tiks dota Discord sadaļā - 🔰┋Nelegālās-atbildes.</p> <br>
+				  </div>
+				  <hr>
+				  <p class="mb-0">Problēmu gadijumā, raksti problēmas apklāstu Discord sadaļā - 🎫┋izveidot-ticket.</p>
+				</div>
+				</div>
+				<button type="button" class="btn btn-success btn-lg float-end" data-bs-dismiss="modal">Aizvērt</button>
+			  </div>
+			  <!-- Veiksmīga anketa beigas-->
+			  
+			</section>
+		</form>
+			
+		</div>
+      <div class="modal-footer bg-dark"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Atkārtots WhiteList -->
+<div class="modal fade" id="AtkartotsWhiteList" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="AtkartotsWhiteListLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-white" id="AtkartotsWhiteListLabel">ATKĀRTOTA WHITELIST REĢISTRĀCIJA</h5>
+        <button type="button bg-white" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+		<div class="modal-body modal-background">
+
+		<form method="post" onsubmit="sendContactAtkarots(event)" enctype='multipart/form-data'>
+			<section class="main">
+			  <div class="container" id="AtkartotsWlSuccessRequestShowHide">
+				<div class="row">
+				  <div class="col-md-6 form-group">
+					<label for="fname">Vārds un uzvārds(IC)</label>
+					<input type="text" name="username" id="userName" class="form-control" onkeydown="return /[a-z ā-ž]/i.test(event.key)" minlength="4" required>
+				  </div>
+				  <div class="col-md-6 form-group">
+					<label for="lname">Discord vārds</label>
+					<p><input type="text" name="username" id="discordName" class="form-control" minlength="4" required></p>
+				  </div>
+				</div>
+
+				<div class="row">
+				  <div class="col-md-6 form-group">
+					<label for="fname">Steam vārds</label>
+					<p><input type="text" name="username" id="steamName" class="form-control" required></p>
+				  </div>
+
+				  <div class="col-md-6 form-group">
+					<label for="lname">Anti WL iemesls?</label>
+					<p><input type="text" name="username" id="ageAnswer" class="form-control" minlength="2" required></p>
+				  </div>
+				</div>
+				<br><br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Kā Tu izproti vārdu MG, jeb MetaGaming?( Arī piemēru kur to pārkāp )</label>
+					<input type="text" name="username" id="Answer2" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Kā Tu izproti vārdu RolePlay (RP), jeb lomuspēle?( Arī piemēru kur to pārkāp )</label>
+					<input type="text" name="username" id="Answer1" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Kā tu izproti vārdu FearRp, jeb FailRP?(Arī piemēru kur to pārkāp)</label>
+					<input type="text" name="username" id="Answer3" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>
+				<br>
+				<div class="row">
+				  <div class="col-md-12 form-group">
+					<label for="fname">Paskaidrojiet kādā situācijā vajadzētu izmantot OOC čatu un kādā situācijā nevajadzētu izmantot OOC čatu?</label>
+					<input type="text" name="username" id="Answer5" class="form-control" onkeydown="return /[a-z ā-ž 1-9 . , -]/i.test(event.key)" minlength="10" required>
+				  </div>
+				</div>			
+				<br>
+				<div class="form-group">
+				  <!--checkbox -->
+				  <div class="checkbox form-check">
+					<input class="form-check-input" type="checkbox" name="checkAtkartotsRules" id="checkAtkartotsRules" />
+					<label class="form-check-label" for="checkAtkartotsRules">Apliecienu, ka esmu piekritis servera noteikumiem.</label>
+				  </div>
+				</div>
+				<br>
+				<input id="checkAtkartotsRulesDisable" type="submit" name="submit" class="form-group btn btn-success float-end" value="Nosūtīt" disabled> <br>
+			  </div>
+			  
+			  <!-- Veiksmīga anketa -->
+			  <div class="container" style="display:none" id="AtkartotsWlSuccessRequestHideShow">
+				<div class="alert alert-success" role="alert">
+				  <h4 class="alert-heading">Anketa nosūtīta!</h4><hr>
+				  <div class="row">
+				  <div class="col-12 form-group">
+				  <b>Turpmākās darbības:</b> 
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>1. Pievienojies servera Discord kanālam. <button type="button" class="btn btn-secondary btn-sm" style="width: 64px;background-color: #5865F2;" target="_blank" href="https://discord.gg/pVRZsBtapF" onclick="window.open('https://discord.gg/pVRZsBtapF')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+					<path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+				  </svg></button></p>
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>2. Administrators izskatīs jūsu anketu 48 stundu laikā.</p>
+				  </div>
+				  <div class="col-12 form-group">
+				  <p>3. Atbilde tiks dota Discord sadaļā - #✅┋Atkārota-whitelist-atbildes.</p> <br>
+				  </div>
+				  <hr>
+				  <p class="mb-0">Problēmu gadijumā, raksti problēmas apklāstu Discord sadaļā - 🎫┋izveidot-ticket.</p>
+				</div>
+				</div>
+				<button type="button" class="btn btn-success btn-lg float-end" data-bs-dismiss="modal">Aizvērt</button>
+			  </div>
+			  <!-- Veiksmīga anketa beigas-->
+			  
+			</section>
+		</form>
+		</div>
+      <div class="modal-footer bg-dark"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script>
+<!-- Check rules button -->
+jQuery('#checkWhitelistRules').click(function() {
+    if (jQuery(this).is(":checked")) {
+        jQuery("#checkWhitelistRulesDisable").removeAttr("disabled");
+
+    } else {
+        jQuery("#checkWhitelistRulesDisable").attr("disabled", "disabled");
+    }
+});
+
+jQuery('#checkStaffRules').click(function() {
+    if (jQuery(this).is(":checked")) {
+        jQuery("#checkStaffRulesDisable").removeAttr("disabled");
+
+    } else {
+        jQuery("#checkStaffRulesDisable").attr("disabled", "disabled");
+    }
+});
+
+jQuery('#checkNelegalRules').click(function() {
+    if (jQuery(this).is(":checked")) {
+        jQuery("#checkNelegalRulesDisable").removeAttr("disabled");
+
+    } else {
+        jQuery("#checkNelegalRulesDisable").attr("disabled", "disabled");
+    }
+});
+
+jQuery('#checkAtkartotsRules').click(function() {
+    if (jQuery(this).is(":checked")) {
+        jQuery("#checkAtkartotsRulesDisable").removeAttr("disabled");
+
+    } else {
+        jQuery("#checkAtkartotsRulesDisable").attr("disabled", "disabled");
+    }
+});
+
+<!-- WL Anketa Success -->
+function WlSuccessRequestShowHide() {
+   document.getElementById("WlSuccessRequestShowHide").style.display = 'none';
+   document.getElementById("WlSuccessRequestHideShow").style.display = ''; 
+}
+
+function StaffSuccessRequestShowHide() {
+   document.getElementById("StaffSuccessRequestShowHide").style.display = 'none';
+   document.getElementById("StaffSuccessRequestHideShow").style.display = ''; 
+}
+
+function NelegalSuccessRequestShowHide() {
+   document.getElementById("NelegalSuccessRequestShowHide").style.display = 'none';
+   document.getElementById("NelegalSuccessRequestHideShow").style.display = ''; 
+}
+
+function AtkartotsWLSuccessRequestShowHide() {
+   document.getElementById("AtkartotsWLSuccessRequestShowHide").style.display = 'none';
+   document.getElementById("AtkartotsWlSuccessRequestHideShow").style.display = ''; 
+}
+
+
+<!-- anketa Wl -->
+async function sendContact(ev) {
+      ev.preventDefault();
+
+      const userName = document
+        .getElementById('userName').value;
+
+      const discordName = document
+        .getElementById('discordName').value;
+
+      const steamName = document
+        .getElementById('steamName').value;
+
+      const ageAnswer = document
+        .getElementById('ageAnswer').value;
+		
+      const Answer1 = document
+        .getElementById('Answer1').value;
+
+      const Answer2 = document
+        .getElementById('Answer2').value;
+
+        const Answer3 = document
+        .getElementById('Answer3').value;
+
+      const Answer5 = document
+        .getElementById('Answer5').value;
+
+
+      const webhookBody = {
+        embeds: [{
+          title: 'Jauna whitelist anketa <3',
+          fields: [
+            { name: 'Vārds(IC)', value: userName },
+            { name: 'Discord', value: discordName },
+			{ name: 'Steam', value: steamName },
+			{ name: 'Cik Tev Gadi?', value: ageAnswer },
+            { name: 'Kā Tu izproti vārdu MG, jeb MetaGaming? ( Arī piemēru kur to pārkāp )', value: Answer1 },
+            { name: 'Kā Tu izproti vārdu RolePlay (RP) jeb lomuspēle? ( Arī piemēru kur to pārkāp )', value: Answer2 },
+            { name: 'Kā tu izproti vārdu FearRp, jeb FailRP?(Arī piemēru kur to pārkāp)', value: Answer3 },
+            { name: 'Paskaidrojiet kādā situācijā vajadzētu izmantot OOC čatu un kādā situācijā nevajadzētu izmantot OOC čatu', value: Answer5 },
+          ]
+        }],
+      };
+
+<!-- Discord channel link -->
+	  const webhookUrl = '';
+
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(webhookBody),
+      });
+
+      if (response.ok) {
+        <!-- alert('Tu esi veiksmīgi pievienots servera whitelist!'); -->
+		<!-- location.replace("index.html") -->
+		WlSuccessRequestShowHide()
+      } else {
+        alert('UPS, ir notikusi kāda kļūdu, meiģini vēlāk velreiz!');
+      }
+}
+
+<!-- Staff Anketa -->
+async function sendContactStaff(ev) {
+      ev.preventDefault();
+
+      const userName = document
+        .getElementById('userName').value;
+
+      const discordName = document
+        .getElementById('discordName').value;
+
+      const steamName = document
+        .getElementById('steamName').value;
+
+      const ageAnswer = document
+        .getElementById('ageAnswer').value;
+		
+      const Answer1 = document
+        .getElementById('Answer1').value;
+
+      const Answer2 = document
+        .getElementById('Answer2').value;
+
+        const Answer3 = document
+        .getElementById('Answer3').value;
+
+      const Answer5 = document
+        .getElementById('Answer5').value;
+
+
+      const webhookBody = {
+        embeds: [{
+          title: 'Jauna staff anketa <3',
+          fields: [
+            { name: 'Personas vārds (RL)', value: userName },
+            { name: 'Discord', value: discordName },
+			{ name: 'Steam', value: steamName },
+			{ name: 'Cik Tev Gadi?', value: ageAnswer },
+            { name: 'Paskaidrojiet kā jūs saprotat terminu CS.', value: Answer1 },
+            { name: 'Paskaidrojiet kā jūs saprotat terminu DM.', value: Answer2 },
+            { name: 'Kā tu izproti vārdu FearRp jeb FailRP? ( Arī piemēru kur to pārkāp)', value: Answer3 },
+            { name: 'Paskaidrojiet kādā situācijā vajadzētu izmantot OOC čatu un kādā situācijā nevajadzētu izmantot OOC čatu?', value: Answer5 },
+          ]
+        }],
+      };
+
+<!-- Discord channel link -->
+		const webhookUrl = '';
+
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(webhookBody),
+      });
+
+      if (response.ok) {
+        <!-- alert('Tu esi veiksmīgi pievienots servera whitelist!'); -->
+		StaffSuccessRequestShowHide()
+      } else {
+        alert('UPS, ir notikusi kāda kļūdu, meiģini vēlāk velreiz!');
+      }
+}
+
+<!-- Nelegalā Anketa -->
+async function sendContactNelegal(ev) {
+      ev.preventDefault();
+
+      const userName = document
+        .getElementById('userName').value;
+
+      const discordName = document
+        .getElementById('discordName').value;
+
+      const steamName = document
+        .getElementById('steamName').value;
+
+      const ageAnswer = document
+        .getElementById('ageAnswer').value;
+		
+      const Answer1 = document
+        .getElementById('Answer1').value;
+
+      const Answer2 = document
+        .getElementById('Answer2').value;
+
+        const Answer3 = document
+        .getElementById('Answer3').value;
+
+      <!-- const Answer5 = document -->
+        <!-- .getElementById('Answer5').value; -->
+
+
+      const webhookBody = {
+        embeds: [{
+          title: 'Jauna nelegālā anketa <3',
+          fields: [
+            { name: 'Personas vārds (IC)', value: userName },
+            { name: 'Discord', value: discordName },
+			{ name: 'Steam', value: steamName },
+			{ name: 'Organizācijas nosaukums', value: ageAnswer },
+            { name: 'Paskaidrojiet, ar ko nodarbosies jūsu organizācija?', value: Answer1 },
+            { name: 'Orgazinācijas apraksts.', value: Answer2 },
+            { name: 'Organizācijas logo (link))', value: Answer3 },
+            <!-- { name: 'Paskaidrojiet kādā situācijā vajadzētu izmantot OOC čatu un kādā situācijā nevajadzētu izmantot OOC čatu?', value: Answer5 }, -->
+          ]
+        }],
+      };
+
+<!-- Discord channel link -->
+	  const webhookUrl = '';
+
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(webhookBody),
+      });
+
+      if (response.ok) {
+        <!-- alert('Tu esi veiksmīgi pievienots servera whitelist!'); -->
+		NelegalSuccessRequestShowHide()
+      } else {
+        alert('UPS, ir notikusi kāda kļūdu, meiģini vēlāk velreiz!');
+      }
+}	
+
+<!-- ATKĀRTOTA WL anketa -->
+async function sendContactAtkarots(ev) {
+      ev.preventDefault();
+
+      const userName = document
+        .getElementById('userName').value;
+
+      const discordName = document
+        .getElementById('discordName').value;
+
+      const steamName = document
+        .getElementById('steamName').value;
+
+      const ageAnswer = document
+        .getElementById('ageAnswer').value;
+		
+      const Answer1 = document
+        .getElementById('Answer1').value;
+
+      const Answer2 = document
+        .getElementById('Answer2').value;
+
+        const Answer3 = document
+        .getElementById('Answer3').value;
+
+      const Answer5 = document
+        .getElementById('Answer5').value;
+
+
+      const webhookBody = {
+        embeds: [{
+          title: 'Jauna anti whitelist anketa <3',
+          fields: [
+            { name: 'Vārds(IC)', value: userName },
+            { name: 'Discord', value: discordName },
+			{ name: 'Steam', value: steamName },
+			{ name: 'Anti WL iemesls?', value: ageAnswer },
+            { name: 'Kā Tu izproti vārdu MG, jeb MetaGaming? ( Arī piemēru kur to pārkāp )', value: Answer1 },
+            { name: 'Kā Tu izproti vārdu RolePlay (RP) jeb lomuspēle? ( Arī piemēru kur to pārkāp )', value: Answer2 },
+            { name: 'Kā tu izproti vārdu FearRp, jeb FailRP?(Arī piemēru kur to pārkāp)', value: Answer3 },
+            { name: 'Paskaidrojiet kādā situācijā vajadzētu izmantot OOC čatu un kādā situācijā nevajadzētu izmantot OOC čatu', value: Answer5 },
+          ]
+        }],
+      };
+
+<!-- Discord channel link -->
+	  const webhookUrl = ' ';
+
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(webhookBody),
+      });
+
+      if (response.ok) {
+        <!-- alert('Tu esi veiksmīgi pievienots servera whitelist!'); -->
+		<!-- location.replace("index.html") -->
+		AtkartotsWLSuccessRequestShowHide()
+      } else {
+        alert('UPS, ir notikusi kāda kļūdu, meiģini vēlāk velreiz!');
+      }
+}	
+  </script>
+</html>
+
+<!-- GWCODEX -->
