@@ -1,2 +1,2 @@
 # FMRP-Website
-RP WL web
+RP WL simple web
